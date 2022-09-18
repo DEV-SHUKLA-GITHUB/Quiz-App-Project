@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ques.css" />
+    <link rel="shortcut icon" href="#" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="video2.mp4" type="video/mp4" />
+    </video>
+    <div class="box" id="box">
+      <div class="title">
+        <h3>Lets Play!</h3>
+      </div>
+      <div class="container">
+        <div class="nav">
+          <div class="scorebox">Score: <span id="scorebox"></span></div>
+          <div class="timerbox">Time left <span id="timer"></span>s</div>
+        </div>
+        <div class="questionbox" id="questionbox">"Sahil"</div>
+        <div class="optionbox">
+          <div class="item" id="ans1" onclick="answerChecked(event)">
+            <p></p>
+          </div>
+          <div class="item" id="ans2" onclick="answerChecked(event)">
+            <p></p>
+          </div>
+          <div class="item" id="ans3" onclick="answerChecked(event)">
+            <p></p>
+          </div>
+          <div class="item" id="ans4" onclick="answerChecked(event)">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="quizEnd">
+      <p class="final-score">Your Score is <span id="userScore"></span></p>
+      <input type="text" id="username" placeholder="Enter Name" />
+      <button id="final" onclick="nameHandler(event)">Submit</button>
+      <a href="./ques.html"><button id="play">Play again</button></a>
+      <a href="./Dashboard/Dashboard.html"
+        ><button id="dash">Dashboard</button></a
+      >
+      <span id="points"></span>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+    <script src="ques.js"></script>
+  </body>
+</html>

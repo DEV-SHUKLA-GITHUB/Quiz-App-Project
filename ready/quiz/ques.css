@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #aac4ff; */
+  background-image: url("./images/tech.jpg");
+  background-size: cover;
+}
+.box {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  height: 40rem;
+  width: 50rem;
+  margin-top: 5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(img2.jpg);
+  background-size: cover;
+}
+.title h3 {
+  color: rgb(255, 255, 255);
+  padding-bottom: 0.77rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.container {
+  height: 70%;
+  width: 90%;
+  align-items: center;
+  margin-left: 2rem;
+
+  box-shadow: rgba(243, 243, 243, 0.15) 0px 48px 100px 0px;
+  border-radius: 30px;
+  background-size: cover;
+  z-index: 2;
+  background-color: #4a3333;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(img1.jpeg);
+}
+.scorebox,
+.timerbox {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  padding: 0.7rem 1rem;
+  border: 1px;
+  border-radius: 3px;
+  background-color: rgb(173, 235, 235);
+  margin: 1rem 1rem 1rem;
+  font-family: "open Sans";
+  font-weight: 600;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.questionbox {
+  background-color: rgb(125, 181, 221);
+  border-radius: 0.7rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 0.6rem 0.6rem;
+  width: 85%;
+  margin-left: 3.2rem;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+}
+
+.item {
+  background-color: aqua;
+  border-radius: 0.6rem;
+  border: 1px solid rgb(22, 20, 20);
+}
+
+.optionbox {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding-bottom: 1rem;
+  margin-left: 4rem;
+  padding-right: 5rem;
+  font-family: "Nunito", sans-serif;
+}
+/* .options {
+  margin-top: 2rem;
+  display: flex;
+  width: 20rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+.item {
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 70%;
+}
+.item:hover {
+  /* background-color: rgb(233, 57, 57); */
+  opacity: 0.6;
+  color: rgb(21, 1, 1);
+  cursor: pointer;
+  font-weight: 800;
+}
+#quizEnd {
+  display: none;
+  width: 30rem;
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  justify-content: center;
+  background-size: cover;
+  /* background-repeat: repeat-y; */
+  /* background-attachment: fixed; */
+  /* height: 100%; */
+  /* width: 100%; */
+  align-items: center;
+  /* background-size: cover; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  font-size: large;
+  font-weight: 400;
+}
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#username {
+  height: 3rem;
+  padding: 1rem;
+}
+
+#quizEnd {
+  flex-direction: column;
+}
+#final {
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+  border: 3px solid rgb(0, 255, 21);
+  cursor: pointer;
+  border-radius: 10px;
+}
+#play {
+  width: 9rem;
+  height: 1.7rem;
+  border: 3px solid rgb(0, 255, 21);
+  cursor: pointer;
+  border-radius: 10px;
+}
+#dash {
+  width: 9rem;
+  height: 1.7rem;
+  margin-top: 20px;
+  border: 3px solid rgb(0, 255, 21);
+  cursor: pointer;
+  border-radius: 10px;
+}
+#username {
+  border: 5px solid rgb(12, 12, 12);
+  border-radius: 2px;
+}
+.final-score {
+  font-size: larger;
+  font-weight: 300;
+  color: white;
+}
+
+#userScore {
+  color: aliceblue;
+  font-size: larger;
+}

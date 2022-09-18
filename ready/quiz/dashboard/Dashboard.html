@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>Scoreboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="scoreboard">
+        <h1>Last 5 Games</h1>
+        <div class="score-tag">
+          <p class="score-tag-name">Name</p>
+          <span class="score-tag-point">Points</span>
+        </div>
+        <div class="scores">
+          <ul class="score-cards">
+            <li class="score-list">
+              <p class="name" id="first"></p>
+              <span class="points" id="firstScore"></span>
+            </li>
+            <li class="score-list">
+              <p class="name" id="second"></p>
+              <span class="points" id="secondScore"></span>
+            </li>
+            <li class="score-list">
+              <p class="name" id="third"></p>
+              <span class="points" id="thirdScore"></span>
+            </li>
+            <li class="score-list">
+              <p class="name" id="fourth"></p>
+              <span class="points" id="fourthScore"></span>
+            </li>
+            <li class="score-list">
+              <p class="name" id="fifth"></p>
+              <span class="points" id="fifthScore"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

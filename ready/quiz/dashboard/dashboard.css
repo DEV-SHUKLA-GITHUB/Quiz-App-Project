@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #bde0fe;
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  font-family: "Lato", sans-serif;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoreboard {
+  /* border: 0.25rem solid black; */
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  margin: 1rem;
+  height: 30rem;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url("./images/trophy.jpg");
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-size: cover;
+}
+.score-list {
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  display: flex;
+  font-weight: 500;
+  font-size: medium;
+  letter-spacing: 0.05rem;
+  /* background: transparent; */
+  justify-content: space-evenly;
+  align-items: center;
+}
+.score-tag {
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  letter-spacing: 0.1rem;
+
+  font-size: medium;
+}
+h1 {
+  text-align: center;
+  text-shadow: 2px 2px 2px rgb(45, 45, 45);
+}
+.score-list:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

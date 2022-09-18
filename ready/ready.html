@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      window.onload = function () {
+        var context = new AudioContext();
+      };
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ready.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="video2.mp4" type="video/mp4" />
+    </video>
+    <audio src="../ready/audio.mp3" autoplay></audio>
+
+    <div class="container">
+      <div><h1>Are You Ready?</h1></div>
+      <div class="button">
+        <a id="text" href="./quiz/ques.html">
+          <button class="btn" type="button">Play Now!</button>
+        </a>
+
+        <a href="./quiz/Dashboard/Dashboard.html"
+          ><button class="btn" type="button">
+            High Scores ><i class="fa-solid fa-crown"></i></button
+        ></a>
+      </div>
+    </div>
+    <script src="ready.js"></script>
+  </body>
+</html>

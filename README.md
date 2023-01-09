@@ -1,4 +1,4 @@
-JAVASCRIPT-QUIZ
+<h1>JAVASCRIPT-QUIZ</h1>
 <br>
 Live link - https://kwiz-app-1212.netlify.app/
 

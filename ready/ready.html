@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script>
-      window.onload = function () {
-        var context = new AudioContext();
-      };
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="ready.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <video autoplay muted loop id="myVideo">
-      <source src="video2.mp4" type="video/mp4" />
-    </video>
-    <audio src="../ready/audio.mp3" autoplay></audio>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    window.onload = function () {
+      var context = new AudioContext();
+    };
+      const audio = document.getElementById('myAudio');
 
-    <div class="container">
-      <div><h1>Are You Ready?</h1></div>
-      <div class="button">
-        <a id="text" href="./quiz/ques.html">
-          <button class="btn" type="button">Play Now!</button>
-        </a>
+const muteButton = document.getElementById('muteButton');
 
-        <a href="./quiz/Dashboard/Dashboard.html"
-          ><button class="btn" type="button">
-            High Scores ><i class="fa-solid fa-crown"></i></button
-        ></a>
-      </div>
+function mute() {
+  audio.volume = audio.volume === 0 ? 1 : 0;
+
+// Update the button icon based on the volume
+if (audio.volume === 0) {
+    muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+} else {
+    muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+}
+};
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ready.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="video2.mp4" type="video/mp4" />
+  </video>
+  <audio id="myAudio" src="../ready/audio.mp3" autoplay></audio>
+
+  <div class="container">
+    <div>
+      <h1>Are You Ready?</h1>
+      <button id="muteButton" onclick={mute()}>
+        <i class="fas fa-volume-up"></i>
+    </button>
     </div>
-    <script src="ready.js"></script>
-  </body>
+    <div class="button">
+    
+      <a id="text">
+        <button class="btn" type="button" onclick="window.location.href = (localStorage.getItem('type') === 'coding') ? './quiz/ques.html' : (localStorage.getItem('type') === 'sport') ? './quiz/sportsQues.html' : (localStorage.getItem('type') === 'movies') ? './quiz/moviesQues.html' : './quiz/generalQues.html'">Play Now!</button>
+      </a>
+
+      <!-- <a href="./quiz/Dashboard/Dashboard.html">
+        <button class="btn" type="button">High Scores <i class="fa-solid fa-crown"></i></button>
+      </a> -->
+    </div>
+  </div>
+</body>
+
 </html>
